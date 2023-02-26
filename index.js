@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const sequelize = require('./src/configs/database')
+const db = require('./src/models')
 
 const app = express();
 const port = process.env.APP_PORT
@@ -10,7 +10,7 @@ require('./src/routes/v1')(app)
 
 const checkConnection = async () => {
   try {
-    await sequelize.authenticate();
+    await db.sequelize.authenticate();
     console.log('Connection has been established successfully.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);

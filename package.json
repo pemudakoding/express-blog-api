@@ -14,5 +14,8 @@
   },
   "scripts": {
     "serve": "nodemon index.js"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
   }
 }
