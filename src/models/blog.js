@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
   Blog.init({
     title: DataTypes.STRING,
     slug: DataTypes.STRING,
     content: DataTypes.TEXT,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Blog',
   });
+
   return Blog;
 };
