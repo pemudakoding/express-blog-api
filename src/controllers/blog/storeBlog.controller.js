@@ -22,7 +22,6 @@ async function handle(request, response) {
     response,
     internalError,
     'fail create blog',
-
   )
 }
 

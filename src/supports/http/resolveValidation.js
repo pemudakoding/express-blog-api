@@ -13,6 +13,8 @@ const validate = (request, response) => {
       errors.array()
     )
   }
+
+  return request
 }
 
 module.exports = {
