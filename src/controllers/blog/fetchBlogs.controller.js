@@ -24,7 +24,7 @@ async function handle(request, response) {
     return handleResponse(
       response,
       notFound,
-      " blog with that id doesn't exists",
+      "blog with that id doesn't exists",
     )
   } catch (error) {
     return handleResponse(

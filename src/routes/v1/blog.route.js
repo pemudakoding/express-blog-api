@@ -8,6 +8,7 @@ const updateBlogController = require('../../controllers/blog/updateBlog.controll
 
 const storeRequest = require('../../request/blog/store.request')
 const fetchRequest = require('../../request/blog/fetch.request')
+const destroyRequest = require('../../request/blog/destroy.request')
 
 
 router.get(
@@ -22,11 +23,12 @@ router.post(
   storeBlogController.handle
 )
 router.delete(
-  '/:id',
+  '/',
+  destroyRequest.validate(),
   destroyBlogController.handle
 )
 router.put(
-  '/:id',
+  '/',
   updateBlogController.handle
 )
 
